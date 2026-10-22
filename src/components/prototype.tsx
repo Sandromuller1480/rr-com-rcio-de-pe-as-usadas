@@ -35,7 +35,7 @@ function useDemo() {
 }
 
 function Logo({ compact = false }: { compact?: boolean }) {
-  return <Link href="/" className={`logo ${compact ? "logo-compact" : ""}`} aria-label="RR Comercio de Pecas Usadas - inicio"><Image src="/brand/rr-logo.png" width={250} height={125} alt="RR Comercio de Pecas Usadas" priority /></Link>;
+  return <Link href="/" className={`logo ${compact ? "logo-compact" : ""}`} aria-label="RR Comercio de Pecas Usadas - inicio"><Image src="/brand/rr-logo-transparent.png" width={1774} height={887} alt="RR Comercio de Pecas Usadas" priority /></Link>;
 }
 
 function Toast({ text, clear }: { text: string; clear: () => void }) {
