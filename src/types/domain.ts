@@ -8,8 +8,8 @@ export type Product = {
   year: number;
   engine: string;
   price: number;
-  condition: "Excelente" | "Boa" | "Regular" | "Nao testada";
-  status: "Disponivel" | "Reservada" | "Vendida" | "Preparacao";
+  condition: "Excelente" | "Boa" | "Regular" | "Não testada";
+  status: "Disponível" | "Reservada" | "Vendida" | "Preparação";
   location: string;
   originVehicle: string;
 };
@@ -17,7 +17,7 @@ export type Product = {
 export type Order = {
   id: string;
   customer: string;
-  channel: "Portal" | "Aplicativo" | "Balcao";
+  channel: "Portal" | "Aplicativo" | "Balcão";
   total: number;
   payment: "Pendente" | "Aprovado" | "Recusado" | "Reembolsado";
   status: string;
@@ -28,7 +28,7 @@ export type Order = {
 
 export type RequestItem = { id: string; type: string; customer: string; vehicle: string; part: string; status: string; createdAt: string };
 export type DemoState = {
-  version: 1;
+  version: 2;
   products: Product[];
   orders: Order[];
   requests: RequestItem[];

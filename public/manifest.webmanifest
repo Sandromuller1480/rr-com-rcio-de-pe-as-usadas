@@ -1,7 +1,7 @@
 {
-  "name": "RR Comercio de Pecas Usadas",
-  "short_name": "RR Pecas",
-  "description": "Catalogo e area do cliente RR Pecas",
+  "name": "RR Comércio de Peças Usadas",
+  "short_name": "RR Peças",
+  "description": "Catálogo e área do cliente RR Peças",
   "start_url": "/app",
   "display": "standalone",
   "background_color": "#f4f5f6",

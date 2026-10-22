@@ -16,7 +16,7 @@ export class LocalDemoRepository implements DemoRepository {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return this.reset();
       const parsed = JSON.parse(raw) as DemoState;
-      if (parsed.version !== 1 || !Array.isArray(parsed.products)) return this.reset();
+      if (parsed.version !== 2 || !Array.isArray(parsed.products)) return this.reset();
       return parsed;
     } catch {
       return createSeed();
@@ -35,13 +35,13 @@ export class LocalDemoRepository implements DemoRepository {
 
 export function completeSale(state: DemoState, productIds: string[], channel: Order["channel"], payment: Order["payment"]): DemoState {
   const available = productIds.map((id) => state.products.find((p) => p.id === id)).filter(Boolean);
-  if (available.length !== productIds.length || available.some((p) => p!.status !== "Disponivel")) throw new Error("Uma ou mais pecas nao estao disponiveis.");
+  if (available.length !== productIds.length || available.some((p) => p!.status !== "Disponível")) throw new Error("Uma ou mais peças não estão disponíveis.");
   if (payment === "Recusado") return state;
   const order: Order = {
     id: `PED-${Date.now().toString().slice(-5)}`,
     customer: "Cliente demonstrativo", channel,
     total: available.reduce((sum, p) => sum + p!.price, 0), payment,
-    status: payment === "Aprovado" ? "Em separacao" : "Novo",
+    status: payment === "Aprovado" ? "Em separação" : "Novo",
     createdAt: new Date().toISOString(),
     items: available.map((p) => ({ productId: p!.id, name: p!.name, price: p!.price })),
     timeline: ["Pedido criado", `Pagamento ${payment.toLowerCase()}`],

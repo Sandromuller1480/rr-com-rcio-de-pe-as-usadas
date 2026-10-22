@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "RR Comercio de Pecas Usadas",
-  description: "Prototipo navegavel da plataforma RR Comercio de Pecas Usadas",
+  title: "RR Comércio de Peças Usadas",
+  description: "Protótipo navegável da plataforma RR Comércio de Peças Usadas",
   manifest: "/manifest.webmanifest",
 };
 
