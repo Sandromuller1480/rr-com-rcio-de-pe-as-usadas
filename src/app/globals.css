@@ -23,8 +23,17 @@ h1,h2,h3,.hero h1,.hero h1 em{font-family:var(--font-acumin);font-weight:900;fon
 .brand-icon{display:block;object-fit:contain}
 .hero{position:relative;isolation:isolate;background:#0b1016}
 .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:url("/hero/hero-desktop.png") center/cover no-repeat;opacity:.7}
-.hero-grid{grid-template-columns:1fr;position:relative;z-index:1}
+.hero-grid{grid-template-columns:1fr;position:relative;z-index:2}
 .hero-grid>div:first-child{max-width:700px}
+.hero-art{position:absolute;z-index:1;top:0;bottom:0;right:max(calc((100vw - 1180px)/2),20px);width:min(48vw,560px);height:auto;display:flex;align-items:center;justify-content:center;pointer-events:none}
+.hero-art:before,.hero-art:after{content:none}
+.hero-brand-icon{width:142px;height:142px}
+.hero-ripples{position:absolute;inset:0;z-index:1;display:grid;place-items:center}
+.hero-ripples span{position:absolute;width:220px;height:220px;border:2px solid rgba(255,196,0,.8);border-radius:50%;opacity:0;animation:rr-ripple 4.8s cubic-bezier(.2,.55,.25,1) infinite;will-change:transform,opacity}
+.hero-ripples span:nth-child(2){animation-delay:-1.2s}
+.hero-ripples span:nth-child(3){animation-delay:-2.4s}
+.hero-ripples span:nth-child(4){animation-delay:-3.6s}
+@keyframes rr-ripple{0%{transform:scale(.72);opacity:.9;border-color:rgba(255,196,0,.85);box-shadow:0 0 18px rgba(255,196,0,.18)}55%{opacity:.28;border-color:rgba(255,255,255,.3)}100%{transform:scale(2.7);opacity:0;border-color:rgba(255,255,255,0);box-shadow:none}}
 .yellow-block{min-width:152px;display:flex;flex-direction:column;align-items:center;gap:8px}
 .yellow-block .brand-icon{width:94px;height:94px}
 .about-mark .brand-icon{width:76%;height:76%}
@@ -37,6 +46,7 @@ h1,h2,h3,.hero h1,.hero h1 em{font-family:var(--font-acumin);font-weight:900;fon
 .footer-brand .brand-icon{width:124px;height:124px}
 .demo-brand{width:112px;height:112px;margin-bottom:4px}
 .demo-brand .brand-icon{width:104px;height:104px}
-@media(max-width:760px){.portal-header .logo img{max-height:62px}.hero:before{background-image:url("/hero/hero-mobile.png");background-position:center}.hero-grid>div:first-child{max-width:none}}
+@media(min-width:761px) and (max-width:1000px){.hero-grid>div:first-child{max-width:58%}.hero-art{display:flex;right:0;width:520px;transform:scale(.72);transform-origin:right center}}
+@media(max-width:760px){.portal-header .logo img{max-height:62px}.hero:before{background-image:url("/hero/hero-mobile.png");background-position:center}.hero-grid>div:first-child{max-width:none}.hero-art{display:none}}
 @media(max-width:420px){.product-grid,.catalog-layout .product-grid{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.trust{flex-wrap:wrap}.process{grid-template-columns:1fr}.process>div:first-child{grid-column:auto}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.hero-ripples span{opacity:.18;border-color:rgba(255,255,255,.35)}.hero-ripples span:nth-child(1){transform:scale(1.05)}.hero-ripples span:nth-child(2){transform:scale(1.5)}.hero-ripples span:nth-child(3){transform:scale(1.95)}.hero-ripples span:nth-child(4){transform:scale(2.4);opacity:.08}}
