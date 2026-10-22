@@ -1,0 +1,13 @@
+{
+  "name": "RR Comercio de Pecas Usadas",
+  "short_name": "RR Pecas",
+  "description": "Catalogo e area do cliente RR Pecas",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#f4f5f6",
+  "theme_color": "#101010",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "/brand/rr-logo.png", "sizes": "1536x1024", "type": "image/png", "purpose": "any" }
+  ]
+}
