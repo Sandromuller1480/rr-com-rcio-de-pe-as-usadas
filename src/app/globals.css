@@ -51,3 +51,7 @@ h1,h2,h3,.hero h1,.hero h1 em{font-family:var(--font-acumin);font-weight:900;fon
 @media(max-width:760px){.portal-header .logo img{max-height:62px}.hero:before{background-image:url("/hero/hero-mobile.png");background-position:center}.hero-grid>div:first-child{max-width:none}.hero-art{display:none}}
 @media(max-width:420px){.product-grid,.catalog-layout .product-grid{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.trust{flex-wrap:wrap}.process{grid-template-columns:1fr}.process>div:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.hero-ripples span{opacity:.18;border-color:rgba(255,255,255,.35)}.hero-ripples span:nth-child(1){transform:scale(1.05)}.hero-ripples span:nth-child(2){transform:scale(1.5)}.hero-ripples span:nth-child(3){transform:scale(1.95)}.hero-ripples span:nth-child(4){transform:scale(2.4);opacity:.08}}
+
+/* Mobile loading screen: full RR logo without a dark box. */
+.loading-logo{display:none}.loading p{margin:0}
+@media(max-width:760px){.loading{background:#fff;color:#111;gap:22px;padding:24px}.loading-logo{display:block;width:min(82vw,340px);height:auto}.loading .loading-spinner{width:30px;height:30px;border-width:3px;border-color:#dedede;border-top-color:var(--yellow)}}

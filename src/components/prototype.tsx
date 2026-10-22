@@ -185,7 +185,7 @@ function Footer(){return <footer className="footer"><div className="shell footer
 
 export function Prototype({route}:{route:string}){
   const {state,update,ready}=useDemo(); const [toast,setToast]=useState("");
-  if(!ready)return <div className="loading"><span/>Carregando demonstração...</div>;
+  if(!ready)return <div className="loading"><Image className="loading-logo" src="/brand/rr-logo-official.png" width={709} height={448} alt="RR Comércio de Peças Usadas" priority/><span className="loading-spinner"/><p>Carregando demonstração...</p></div>;
   const props={state,update,notify:setToast,route}; let page;
   if(route==="")page=<HomePage {...props}/>; else if(route==="pecas")page=<CatalogPage {...props}/>; else if(route.startsWith("pecas/"))page=<ProductPage {...props}/>; else if(route==="carrinho")page=<CartPage {...props}/>; else if(route==="checkout")page=<CheckoutPage {...props}/>; else if(route==="solicitar-peca")page=<RequestPage {...props}/>; else if(route==="app")page=<AppPage {...props}/>; else if(route==="demo")page=<DemoPage {...props}/>; else if(route.startsWith("gestao"))page=<ManagementShell {...props} route={route}/>; else if(route.startsWith("minha-conta"))page=<AccountPage {...props} route={route}/>; else page=<StaticPage {...props} route={route}/>;
   return <>{page}{toast&&<Toast text={toast} clear={()=>setToast("")}/>}</>;
