@@ -27,7 +27,7 @@ h1,h2,h3,.hero h1,.hero h1 em{font-family:var(--font-acumin);font-weight:900;fon
 .hero-grid>div:first-child{max-width:700px}
 .hero-art{position:absolute;z-index:1;top:0;bottom:0;right:max(calc((100vw - 1180px)/2),20px);width:min(48vw,560px);height:auto;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .hero-art:before,.hero-art:after{content:none}
-.hero-part{background:rgba(36,36,36,.32);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 25px 70px rgba(0,0,0,.4)}
+.hero-part{background:rgba(36,36,36,.32);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 25px 70px rgba(0,0,0,.4)}
 .hero-brand-icon{width:142px;height:142px}
 .hero-ripples{position:absolute;inset:0;z-index:1;display:grid;place-items:center}
 .hero-ripples span{position:absolute;width:220px;height:220px;border:2px solid rgba(255,196,0,.8);border-radius:50%;opacity:0;animation:rr-ripple 4.8s cubic-bezier(.2,.55,.25,1) infinite;will-change:transform,opacity}
