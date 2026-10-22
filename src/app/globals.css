@@ -13,7 +13,7 @@
 
 /* Brand refinements: transparent navbar mark and Acumin typography. */
 .portal-header .logo{align-self:stretch;align-items:center;background:transparent;border-radius:0;padding:0}
-.portal-header .logo img{width:auto;max-height:64px}
+.portal-header .logo img{width:auto;max-height:78px}
 body{font-family:var(--font-acumin);font-weight:500;font-stretch:50%;font-synthesis:none}
 h1,h2,h3,.hero h1,.hero h1 em{font-family:var(--font-acumin);font-weight:900;font-stretch:50%;line-height:1.02}
 .hero h1{letter-spacing:-.035em}
@@ -21,10 +21,20 @@ h1,h2,h3,.hero h1,.hero h1 em{font-family:var(--font-acumin);font-weight:900;fon
 .trust strong,.price-row strong,.process article>span,.about-mark,.yellow-block,.stats strong,.donut:after,.detail-price{font-family:var(--font-acumin);font-weight:900;font-stretch:50%}
 .yellow-block small{font-family:var(--font-acumin);font-weight:900;font-stretch:50%}
 .brand-icon{display:block;object-fit:contain}
+.hero-brand-badge{width:150px;height:150px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 14px 32px rgba(0,0,0,.2)}
+.hero-brand-badge .brand-icon{width:126px;height:126px}
 .yellow-block{min-width:152px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.yellow-block .brand-icon{width:105px;height:auto}
-.about-mark .brand-icon{width:88%;height:auto}
-.app-hello>span .brand-icon{width:34px;height:auto}
-@media(max-width:760px){.portal-header .logo img{max-height:52px}}
+.yellow-block .brand-icon{width:94px;height:94px}
+.about-mark .brand-icon{width:76%;height:76%}
+.app-hello>span{background:#fff;border:2px solid var(--yellow)}
+.app-hello>span .brand-icon{width:36px;height:36px}
+.mgmt-brand,.footer-brand,.demo-brand{display:inline-flex;align-items:center;justify-content:center}
+.mgmt-brand{width:118px;height:82px;margin:0 10px 18px}
+.mgmt-brand .brand-icon{width:108px;height:108px}
+.footer-brand{width:132px;height:132px;align-self:start}
+.footer-brand .brand-icon{width:124px;height:124px}
+.demo-brand{width:112px;height:112px;margin-bottom:4px}
+.demo-brand .brand-icon{width:104px;height:104px}
+@media(max-width:760px){.portal-header .logo img{max-height:62px}}
 @media(max-width:420px){.product-grid,.catalog-layout .product-grid{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.trust{flex-wrap:wrap}.process{grid-template-columns:1fr}.process>div:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
