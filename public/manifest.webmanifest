@@ -8,6 +8,6 @@
   "theme_color": "#101010",
   "orientation": "portrait-primary",
   "icons": [
-    { "src": "/brand/rr-logo.png", "sizes": "1536x1024", "type": "image/png", "purpose": "any" }
+    { "src": "/brand/rr-icon.png", "sizes": "1254x1254", "type": "image/png", "purpose": "any maskable" }
   ]
 }

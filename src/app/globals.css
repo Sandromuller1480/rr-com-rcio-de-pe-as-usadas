@@ -23,6 +23,11 @@ strong,b{font-weight:600}
 .trust strong,.price-row strong,.process article>span,.about-mark,.yellow-block,.stats strong,.donut:after{font-family:"Arial Narrow",Arial,"Helvetica Neue",sans-serif;font-weight:500}
 .yellow-block small{font-family:Arial,"Helvetica Neue",sans-serif;font-weight:600}
 .detail-price{font-weight:500}
+.brand-icon{display:block;object-fit:contain}
+.yellow-block{min-width:152px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.yellow-block .brand-icon{width:105px;height:auto}
+.about-mark .brand-icon{width:88%;height:auto}
+.app-hello>span .brand-icon{width:34px;height:auto}
 @media(max-width:760px){.portal-header .logo img{max-height:52px}}
 @media(max-width:420px){.product-grid,.catalog-layout .product-grid{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr}.trust{flex-wrap:wrap}.process{grid-template-columns:1fr}.process>div:first-child{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
